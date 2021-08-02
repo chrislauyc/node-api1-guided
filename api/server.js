@@ -29,7 +29,7 @@ server.get('/api/dogs/:id', (req, res) => {
       if (!dog) {
         res.status(404).json({ message: `dog ${id} not found`})
       } else {
-        
+        res.status(200).json(dog)
       }
     })
     .catch(err => {
