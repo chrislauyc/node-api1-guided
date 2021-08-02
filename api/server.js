@@ -18,6 +18,7 @@ server.get('/api/dogs/:id', (req, res) => {
   res.json({ message: 'get dog by id is working' })
 })
 // [POST] /api/dogs (C of CRUD, create new dog from JSON payload)
+server.post('/api/')
 // [PUT] /api/dogs/:id (U of CRUD, update dog with :id using JSON payload)
 // [DELETE] /api/dogs/:id (D of CRUD, remove dog with :id)
 
