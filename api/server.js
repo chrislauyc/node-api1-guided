@@ -1,5 +1,5 @@
 // IMPORTS AT THE TOP
-const express = require('express') // import express from 'express'
+const express = require('express') // import express from 'express' // ES6
 
 // INSTANCE OF EXPRESS APP
 const server = express()
@@ -16,4 +16,4 @@ const server = express()
 // [DELETE] /api/dogs/:id (D of CRUD, remove dog with :id)
 
 // EXPOSING THE SERVER TO OTHER MODULES
-module.exports = server // export default server
+module.exports = server // export default server // ES6
