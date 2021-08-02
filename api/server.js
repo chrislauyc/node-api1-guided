@@ -5,6 +5,7 @@ const express = require('express') // import express from 'express' // ES6
 const server = express()
 
 // GLOBAL MIDDLEWARE
+server.use(express.json()) // this teaches express to read JSON from reqs
 
 // ENDPOINTS
 
