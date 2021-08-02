@@ -1,6 +1,6 @@
 // IMPORTS AT THE TOP
 const express = require('express') // import express from 'express' // ES6
-
+const Dog = require('./dog-modoool')
 // INSTANCE OF EXPRESS APP
 const server = express()
 
