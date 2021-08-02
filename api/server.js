@@ -12,7 +12,9 @@ server.use(express.json()) // this teaches express to read JSON from reqs
 // [GET] /api/dogs (R of CRUD, fetch all dogs)
 server.get('/api/dogs', (req, res) => {
   Dog.findAll()
-    .then()
+    .then(dogs => {
+      res.status(200).json(dogs)
+    })
     .catch(err => {
       res.status(500).json({ message: err.message })
     })
