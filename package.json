@@ -1,10 +1,17 @@
 {
+  "dependencies": {
+    "express": "^4.17.1",
+    "shortid": "^2.2.16"
+  },
   "name": "gp",
-  "version": "1.0.0",
   "description": "Guided project for **Node API 1** Module.",
+  "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"foobar\" && exit 1",
-    "ketchup": "git fetch && git reset --hard origin/main"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "ketchup": "git fetch && git reset --hard origin/lecture"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.12"
   }
 }
