@@ -27,8 +27,10 @@ server.get('/api/dogs/:id', (req, res) => {
   Dog.findById(id)
     .then(dog => {
       if (!dog) {
+        // the id might not have existed in the db
         res.status(404).json({ message: `dog ${id} not found`})
       } else {
+        // send happy response!
         res.status(200).json(dog)
       }
     })
