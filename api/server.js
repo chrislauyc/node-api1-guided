@@ -11,7 +11,7 @@ server.use(express.json()) // this teaches express to read JSON from reqs
 
 // [GET] /api/dogs (R of CRUD, fetch all dogs)
 server.get('/api/dogs', (req, res) => {
-  res.json({ message: 'get all dogs working!' })
+  Dog.findAll()
 })
 // [GET] /api/dogs/:id (R of CRUD, fetch dog by :id)
 server.get('/api/dogs/:id', (req, res) => {
