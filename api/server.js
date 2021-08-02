@@ -68,9 +68,11 @@ server.put('/api/dogs/:id', (req, res) => {
 // [DELETE] /api/dogs/:id (D of CRUD, remove dog with :id)
 server.delete('/api/dogs/:id', (req, res) => {
   const { id } = req.params
+  // in the afternoon you'll have to getById the dog before
+  // proceeding with the deletion!
   Dog.delete(id)
     .then(deleted => {
-      
+
     })
     .catch(err => {
       res.status(500).json({ message: err.message })
