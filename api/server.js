@@ -55,7 +55,11 @@ server.put('/api/dogs/:id', (req, res) => {
   const { name, weight } = req.body
   Dog.update(id, { name, weight })
     .then(updatedDog => {
-      res.json(updatedDog) // defaults to status 200
+      if (!updatedDog) {
+        res.status(404).json({ message: 'not found!' })
+      } else {
+        res.json(updatedDog) // defaults to status 200
+      }
     })
     .catch(err => {
       res.status(500).json({ message: err.message })
