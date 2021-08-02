@@ -53,8 +53,7 @@ server.post('/api/dogs', (req, res) => {
 server.put('/api/dogs/:id', (req, res) => {
   const { id } = req.params
   const { name, weight } = req.body
-  console.log(name, weight, id)
-  res.json({ id, name, weight })
+  Dog.update(id)
 })
 // [DELETE] /api/dogs/:id (D of CRUD, remove dog with :id)
 server.delete('/api/dogs/:id', (req, res) => {
