@@ -10,7 +10,7 @@ server.use(express.json()) // this teaches express to read JSON from reqs
 // ENDPOINTS
 
 // [GET] / (Hello World endpoint)
-server.get()
+server.get('/api/dogs')
 // [GET] /api/dogs/:id (R of CRUD, fetch dog by :id)
 // [GET] /api/dogs (R of CRUD, fetch all dogs)
 // [POST] /api/dogs (C of CRUD, create new dog from JSON payload)
