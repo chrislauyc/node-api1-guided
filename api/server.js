@@ -26,6 +26,8 @@ server.put('/api/dogs/:id', (req, res) => {
   res.json({ message: 'update existing dog working!' })
 })
 // [DELETE] /api/dogs/:id (D of CRUD, remove dog with :id)
-server.delete('/api')
+server.delete('/api/dogs/:id', (req, res) => {
+  res.json({ message: `deleted dog with id ${}` })
+})
 // EXPOSING THE SERVER TO OTHER MODULES
 module.exports = server // export default server // ES6
