@@ -14,7 +14,7 @@ server.get('/api/dogs', (req, res) => {
   Dog.findAll()
     .then()
     .catch(err => {
-      res.status(500).json({ message: err.message })
+      res.status(500).json({ message: 'ARH' })
     })
 })
 // [GET] /api/dogs/:id (R of CRUD, fetch dog by :id)

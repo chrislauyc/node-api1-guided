@@ -8,7 +8,7 @@ let dogs = [
 module.exports = {
   async findAll() {
     // SELECT * FROM dogs;
-    return Promise.reject('ARGHHH DISASTER')
+    return Promise.reject({ message: 'DIS DISASTER!!!!'})
     return dogs
   },
 
