@@ -1,0 +1,10 @@
+{
+  "name": "gp",
+  "version": "1.0.0",
+  "description": "Guided project for **Node API 1** Module.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"foobar\" && exit 1",
+    "ketchup": "git fetch && git reset --hard origin/main"
+  }
+}
