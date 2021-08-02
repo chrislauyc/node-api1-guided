@@ -68,6 +68,7 @@ server.put('/api/dogs/:id', (req, res) => {
 // [DELETE] /api/dogs/:id (D of CRUD, remove dog with :id)
 server.delete('/api/dogs/:id', (req, res) => {
   const { id } = req.params
+  console.log('about to delete', id)
   // in the afternoon you'll have to getById the dog before
   // proceeding with the deletion!
   Dog.delete(id)
