@@ -11,9 +11,12 @@ server.use(express.json()) // this teaches express to read JSON from reqs
 
 // [GET] /api/dogs (R of CRUD, fetch all dogs)
 server.get('/api/dogs', (req, res) => {
-  res.json({ message: 'get all dogs working!'}) // hard-coded
+  res.json({ message: 'get all dogs working!'})
 })
 // [GET] /api/dogs/:id (R of CRUD, fetch dog by :id)
+server.get('/api/dogs/:id', (req, res) => {
+  
+})
 // [POST] /api/dogs (C of CRUD, create new dog from JSON payload)
 // [PUT] /api/dogs/:id (U of CRUD, update dog with :id using JSON payload)
 // [DELETE] /api/dogs/:id (D of CRUD, remove dog with :id)
