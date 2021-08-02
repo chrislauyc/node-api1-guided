@@ -8,6 +8,7 @@ let dogs = [
 module.exports = {
   async findAll() {
     // SELECT * FROM dogs;
+    return Promise.reject('ARGHHH DISASTER')
     return dogs
   },
 
