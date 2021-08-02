@@ -21,6 +21,7 @@ server.get('/api/dogs', (req, res) => {
 })
 // [GET] /api/dogs/:id (R of CRUD, fetch dog by :id)
 server.get('/api/dogs/:id', (req, res) => {
+  const { id } = req.params
   res.json({ message: 'get dog by id is working' })
 })
 // [POST] /api/dogs (C of CRUD, create new dog from JSON payload)
