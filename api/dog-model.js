@@ -14,6 +14,7 @@ module.exports = {
 
   async findById(id) {
     // SELECT * FROM dogs WHERE id = 1;
+    // throw new Error('HORROR!!!!!!')
     const dog = dogs.find(d => d.id === id)
     return dog
   },
