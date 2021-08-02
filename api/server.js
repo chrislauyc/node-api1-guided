@@ -19,9 +19,12 @@ server.get('/api/dogs/:id', (req, res) => {
 })
 // [POST] /api/dogs (C of CRUD, create new dog from JSON payload)
 server.post('/api/dogs', (req, res) => {
-  res.json({ message: 'post new dog working!'})
+  res.json({ message: 'post new dog working!' })
 })
 // [PUT] /api/dogs/:id (U of CRUD, update dog with :id using JSON payload)
+server.put('/api/dogs/:id', (req, res) => {
+  res.json({ message: 'update existing dog working!' })
+})
 // [DELETE] /api/dogs/:id (D of CRUD, remove dog with :id)
 
 // EXPOSING THE SERVER TO OTHER MODULES
