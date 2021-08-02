@@ -72,7 +72,11 @@ server.delete('/api/dogs/:id', (req, res) => {
   // proceeding with the deletion!
   Dog.delete(id)
     .then(deleted => {
-
+      if (!deleted) {
+        res.status(404).json({ message: 'not found!' })
+      } else {
+        res.json(deleted)
+      }
     })
     .catch(err => {
       res.status(500).json({ message: err.message })
