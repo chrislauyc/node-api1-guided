@@ -28,7 +28,7 @@ server.get('/api/dogs/:id', (req, res) => {
     .then(dog => {
       if (!dog) {
         // the id might not have existed in the db
-        res.status(404).json({ message: `dog ${id} not found`})
+        res.status(404).json({ message: `dog ${id} not found` })
       } else {
         // send happy response!
         res.status(200).json(dog)
@@ -40,7 +40,8 @@ server.get('/api/dogs/:id', (req, res) => {
 })
 // [POST] /api/dogs (C of CRUD, create new dog from JSON payload)
 server.post('/api/dogs', (req, res) => {
-  const { name, weight} = req.body
+  const { name, weight } = req.body
+  res.json({ name, weight })
 })
 // [PUT] /api/dogs/:id (U of CRUD, update dog with :id using JSON payload)
 server.put('/api/dogs/:id', (req, res) => {
