@@ -23,7 +23,12 @@ server.get('/api/dogs', (req, res) => {
 server.get('/api/dogs/:id', (req, res) => {
   // gather info from the req object
   const { id } = req.params
-  res.json({ message: 'get dog by id is working' })
+  // use that info to query the db using helper
+  Dog.findById(id)
+    .then()
+    .catch(err => {
+      res.status(500).json({ message: err.message })
+    })
 })
 // [POST] /api/dogs (C of CRUD, create new dog from JSON payload)
 server.post('/api/dogs', (req, res) => {
