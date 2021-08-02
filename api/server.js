@@ -28,6 +28,8 @@ server.get('/api/dogs/:id', (req, res) => {
     .then(dog => {
       if (!dog) {
         res.status(404).json({ message: `dog ${id} not found`})
+      } else {
+        
       }
     })
     .catch(err => {
