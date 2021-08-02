@@ -26,7 +26,9 @@ server.get('/api/dogs/:id', (req, res) => {
   // use that info to query the db using helper
   Dog.findById(id)
     .then(dog => {
-      
+      if (!dog) {
+        res.status(404).json({ message: `dog ${id} not found`})
+      }
     })
     .catch(err => {
       res.status(500).json({ message: err.message })
